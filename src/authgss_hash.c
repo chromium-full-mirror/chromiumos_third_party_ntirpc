@@ -271,7 +271,7 @@ void authgss_ctx_gc_idle(void)
 
 		if (unlikely((authgss_hash_st.size > __svc_params->gss.max_gc)
 			     ||
-			     ((abs(axp->gen - gd->gen) >
+			     (((axp->gen - gd->gen) >
 			       __svc_params->gss.max_idle_gen))
 			     || (authgss_ctx_expired(gd)))) {
 
